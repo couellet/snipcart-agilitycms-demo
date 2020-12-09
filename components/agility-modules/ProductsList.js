@@ -1,5 +1,6 @@
 import tw from 'twin.macro';
 import Image from 'next/image';
+import SnipcartButton from './SnipcartButton';
 
 const Container = tw.div`container mx-auto grid gap-5 grid-cols-1 sm:grid-cols-3 mb-8`;
 const Card = tw.div`my-8`;
@@ -26,6 +27,7 @@ const ProductsList = ({customData}) => {
                         <Title>{product.name}</Title>
                         <Price>${product.price}</Price>
                         <p>{product.description}</p>
+                        <SnipcartButton product={product} />
                     </Card>
                 ))}
             </Container>
