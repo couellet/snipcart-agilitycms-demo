@@ -4,4 +4,9 @@ const ProductsList = (props) => {
     )
 };
 
+ProductsList.getCustomInitialProps = async ({
+    agility,
+    languageCode}) => {
+}
+
 export default ProductsList;
