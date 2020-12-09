@@ -1,7 +1,9 @@
-const ProductsList = (props) => {
+const ProductsList = ({customData}) => {
+    const { products } = customData;
+    console.log(products);
     return (
         <h1>Products list</h1>
-    )
+    );
 };
 
 ProductsList.getCustomInitialProps = async ({
