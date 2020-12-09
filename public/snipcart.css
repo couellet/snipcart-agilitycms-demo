@@ -1,3 +1,7 @@
 .snipcart-modal__container {
     z-index: 100;
 }
+
+.snipcart-checkout {
+    padding: 0 20px;
+}
