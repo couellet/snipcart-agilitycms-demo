@@ -1,4 +1,11 @@
 module.exports = {
+	images: {
+		domains: [
+		  `cdn.aglty.io`,
+		  `${process.env.AGILITY_GUID}-cdn.agilitycms.cloud`,
+		],
+	  },
+	  
 	webpack: (config, { isServer }) => {
 	  // Fixes npm packages that depend on `fs` module
 	  if (!isServer) {
