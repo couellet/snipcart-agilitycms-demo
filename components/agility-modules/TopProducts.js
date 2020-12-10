@@ -1,7 +1,18 @@
-const TopProducts = (props) => {
+const TopProducts = ({fields}) => {
+    const products = fields.products.map(p => {
+        return {
+            productId: p.fields.productId,
+            name: p.fields.name,
+            price: p.fields.price,
+            image: p.fields.image.url,
+        }
+    });
+
+    console.log(products);
+    
     return (
         <div>
-            <h1>Products list</h1>
+            {products.length} products to show
         </div>
     )
 }
