@@ -1,9 +1,20 @@
+import tw from 'twin.macro';
+import Product from './Product';
+
+const Container = tw.div`container mx-auto grid gap-5 grid-cols-1 sm:grid-cols-3 mb-8`;
+const Header = tw.h1`container mt-1 text-2xl font-bold`;
+
 const ProductsList = ({customData}) => {
     const { products } = customData;
 
     return (
         <div>
-            <h1>Products list {products.length} products</h1>
+            <Header>Products list</Header>
+            <Container>
+                {products.map((product, i) => (
+                    <Product product={product} key={i} />
+                ))}
+            </Container>
         </div>
     )
 }
