@@ -1,3 +1,8 @@
+import Product from './Product';
+import tw from 'twin.macro';
+
+const Container = tw.div`container mx-auto grid gap-5 grid-cols-1 sm:grid-cols-3 mb-8`;
+
 const TopProducts = ({fields}) => {
     const products = fields.products.map(p => {
         return {
@@ -7,13 +12,13 @@ const TopProducts = ({fields}) => {
             image: p.fields.image.url,
         }
     });
-
-    console.log(products);
     
     return (
-        <div>
-            {products.length} products to show
-        </div>
+        <Container>
+            {products.map((product, i) => (
+                <Product product={product} key={i} />
+            ))}
+        </Container>
     )
 }
 
