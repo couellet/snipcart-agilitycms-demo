@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import tw from 'twin.macro';
+import SnipcartButton from './SnipcartButton';
 
 const Card = tw.div`my-8`;
 const Title = tw.h2`mt-2 text-xl font-bold`;
@@ -17,6 +18,7 @@ const Product = ({product}) => {
             <Title>{product.name}</Title>
             <Price>${product.price}</Price>
             <p>{product.description}</p>
+            <SnipcartButton product={product} />
     </Card>
     )
 }
