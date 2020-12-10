@@ -7,7 +7,7 @@ const SnipcartButton = ({product}) => {
         <Button
             className="snipcart-add-item"
             data-item-id={product.productId}
-            data-item-url="/"
+            data-item-url="/api/products"
             data-item-name={product.name}
             data-item-description={product.description}
             data-item-price={product.price}
