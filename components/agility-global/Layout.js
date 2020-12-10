@@ -43,6 +43,12 @@ function Layout(props) {
 					<meta property="og:image" content={dynamicPageItem.seo.ogImage} />
 				}
 				<link rel="stylesheet" href="/prose.css" />
+				
+				<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.26/default/snipcart.css" />
+				<script async src="https://cdn.snipcart.com/themes/v3.0.26/default/snipcart.js"></script>
+				<div id="snipcart" data-config-modal-style="side" data-api-key="YmI2OGIzYTMtZDBhOS00YjliLTliZTgtOThhZTI1NGM0NDFiNjM3NDMxMzcwOTU4NTQ4ODEy" hidden></div>
+
+				<link rel="stylesheet" href="/snipcart.css" />
 			</Head>
 			<PreviewBar {...props} />
 
