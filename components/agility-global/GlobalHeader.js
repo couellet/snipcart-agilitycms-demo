@@ -70,6 +70,11 @@ const GlobalHeader = (props) => {
 				<Link key={link.path} href={`/[...slug]`} as={link.path}><NavLink>{link.text}</NavLink></Link>
 			)) }
 			{
+				<button className="snipcart-checkout">
+				🛒 (<span className="snipcart-items-count">0</span>)
+				</button>
+			}
+			{
 				globalHeaderItem.fields.primaryCTA &&
 				<PrimaryLink href={globalHeaderItem.fields.primaryCTA.href} target={globalHeaderItem.fields.primaryCTA.target}>{globalHeaderItem.fields.primaryCTA.text}</PrimaryLink>
 			}
