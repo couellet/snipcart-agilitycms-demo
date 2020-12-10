@@ -1,7 +1,9 @@
-const ProductsList = (props) => {
+const ProductsList = ({customData}) => {
+    const { products } = customData;
+
     return (
         <div>
-            <h1>Products list</h1>
+            <h1>Products list {products.length} products</h1>
         </div>
     )
 }
